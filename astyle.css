@@ -1,0 +1,249 @@
+@media screen and (min-width: 1200px) {
+.container {
+width:auto;
+}
+.body {
+    background-image: url(./vaizdai/IMG_5112.jpg);
+    color: #002776;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+
+.darbo {
+    margin:5%; 
+    width:50%;
+    position:center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #538f5d;
+}
+
+.darbo:hover {
+    background-color: #53b55d;
+}
+
+
+.redaguoja {
+    margin-left:2px;
+    width:50%;
+    position:center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+}
+
+
+
+
+#submit {
+    background-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    border-color: black;
+    border:1%;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    position:left;
+}
+
+#virsus {
+width:80%; 
+margin-left:10%; 
+margin-top:0%;
+margin-bottom:20px;
+}
+
+#submit:hover {
+    border: none;
+    background-color:green;
+
+    box-shadow: 0px 0px 1px #777;
+}
+
+.uzduotys {
+margin-top:1%;
+width:100%;
+height:10%;
+color:white;
+text-align:center;
+overflow:hidden;
+border: 1px solid black;
+}
+
+
+.kairys {
+ width: 12%;
+ background-color:#000000;
+ text-align:center;
+ opacity:1;
+ color:white;
+
+ float:right;
+}
+
+.desinys {
+float:left;
+position:relative;
+text-align:center;
+width:83%;
+height:auto;
+background-color: white;
+margin-left:0;
+}
+
+#par {
+  font-family:sans-serif;
+  color:white;
+  position: relative;
+  
+}
+              
+
+.lentele {
+    width:20%;
+    margin-left:5%;
+    margin-top:2%;
+    text-align:center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+.failass {
+    width: 15%;
+    margin-left:3%;
+    margin-top:3%;
+    text-align:center;
+    display: inline-block;
+
+
+}
+
+.zinute {
+    width: 30%;
+    margin-left:3%;
+    margin-top:3%;
+    text-align:center;
+    display: inline-block;
+
+
+}
+
+
+.failas-2 {
+    width: 3%;
+    margin-left:5%;
+    margin-top:2.75%;
+    text-align:center;
+    display: inline-block;
+}
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+
+.failas-2 {
+    width:40%;
+    margin-left:3%;
+    display:inline-block;
+}
+
+.failass {
+    width: 80%;
+    vertical-align: middle;
+    margin-left:3.7%;
+    margin-top:3%;
+    text-align:center;
+    display: inline-block;
+
+
+}
+
+.lentele {
+    width:80%;
+    vertical-align: middle;
+    margin-top:10%;
+    margin-left:10%;
+    text-align:center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.desinys {
+position:relative;
+text-align:center;
+width:100%;
+height:auto;
+background-color: white;
+margin-left:0;
+}
+
+
+.juosta {
+background-image: url(vaizdai/skiriamoji.jpg);
+width:100%;
+height:auto;
+position:relative;
+margin-left:0%;
+}
+
+
+
+
+
+.navbar-inverse {
+width:100%;
+margin-left:0%;
+
+}
+
+.container {
+width:auto;
+}
+
+
+.body {
+    background-image: url(./vaizdai/IMG_5112.jpg);
+    color: #002776;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+#virsus {
+width:100%; 
+margin-left:0%; 
+margin-top:0%;
+margin-bottom:20px;
+}
+
+
+
+
+}

@@ -1,0 +1,623 @@
+.naujienos {
+  font-size: 0.8em;
+}
+
+
+
+
+.flex-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.login-form td {
+  width: 50% !important;
+}
+
+.login-form {
+  margin: 1em 0;
+}
+
+input[type=text], textarea, input[type=email],input[type=number], input[type=password]{
+  background: #009fda !important;
+}
+
+input[type=submit] {
+  background: #002776 !important;
+  transition: 0.6s;
+  border-radius: 50px !important;
+}
+
+input[type=submit]:hover {
+  background: #009fda !important;
+}
+
+.form-contact {
+  width: 50%;
+  margin: 1em auto !important;
+}
+
+
+@media screen and (max-width: 900px) {
+  .flex-box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+  }
+  .form-contact {
+    width: 80%;
+    margin: 1em auto !important;
+  }
+}
+
+.flip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 25em;
+  transition: 0.6s;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  perspective: 300px;
+  margin: 10%;
+}
+
+.info p {
+  text-align: left !important;
+  width: 90%;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+.card .front, .card .back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .front {
+  position: absolute;
+  background: unset;
+  color: #fff;
+}
+
+.card .back {
+  position: absolute;
+  transform: rotateY(180deg);
+  background: #002776;
+  color: #fff;
+}
+
+.flip:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card a {
+  color: #009fda;
+  font-weight: bold;
+}
+
+.card h3, .card u {
+  color: #009fda !important;
+}
+.front .title {
+  padding: 1em;
+  background: #009fda;
+  width: 80%;
+}
+
+.back .text {
+  background: #002776;
+  padding: 0 0 1em 0;
+}
+
+
+
+.copyright {
+  margin-top: 3em;
+}
+
+@media screen and (max-width: 1200px) {
+  .info form {
+    float: unset !important;
+  }  
+
+  .forma2 {
+    margin: unset !important;
+    width: 80% !important;
+  }
+
+  .nuotrauka{
+    margin: 0.25em auto !important;
+  }
+
+  .tekstas2 {
+    width: 90% !important;
+    margin: 1em auto !important;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+.container {
+width:auto;
+}
+
+
+#virsus {
+width:80%; 
+margin-left:10%; 
+margin-top:0%;
+margin-bottom:20px;
+}
+
+
+
+
+
+.darbo {
+    margin:5%; 
+    width:50%;
+    position:center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #538f5d;
+}
+
+.darbo:hover {
+    background-color: #53b55d;
+}
+
+
+.redaguoja {
+    margin-left:2px;
+    width:50%;
+    position:center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #002776;
+}
+
+.juosta {
+    background: #009fda;
+    width:80%;
+    height:auto;
+    margin-left:10%;
+    color: #009fda;
+    margin: 1em auto;
+    height: 10px;
+}
+
+.copyright {
+  background: #002776;
+    width:80%;
+    height:auto;
+    text-align:center;
+    color:white;
+    margin-left:10%;
+    margin-bottom:1%;
+    content: "";
+    padding: 0.25em 0em;
+border-radius: 25px;
+}
+
+
+
+.highlight {
+  color: #009fda !important;
+  font-weight: bold;
+}
+
+
+
+.info h2, .info h1, .info h3, .info b {
+  color: #002776;
+}
+
+
+
+#submit {
+    background-color: #002776;
+    border-radius:3px;
+    border-color: #000;
+    border:1px;
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    position:left;
+    transition: 0.6s;
+}
+
+#submit:hover {
+    border: none;
+    background-color:#009fda;
+    box-shadow: 0px 0px 1px #777;
+}
+
+.uzduotis {
+margin-top:1%;
+width:100%;
+height:10%;
+color:white;
+text-align:center;
+overflow:hidden;
+border: 1px solid #002776;
+}
+
+
+.kairys {
+ width: 12%;
+ background-color:#000000;
+ text-align:center;
+ opacity:1;
+ color:white;
+ float:right;
+}
+
+.desinys {
+float:left;
+position:relative;
+text-align:center;
+width:83%;
+height:auto;
+background-color: white;
+margin-left:0;
+}
+
+#par {
+  font-family:sans-serif;
+  color:white;
+  position: relative;
+  
+}
+
+.forma{
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  border-radius:50%;
+  border-style: dotted;
+}
+
+
+.uzejimas{
+margin-top: -103.25%;
+  position: absolute;
+  height: 100%;
+  width: 100%;                              
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius:50%;
+}
+
+
+
+.forma:hover .uzejimas{
+  opacity: 1;           
+  background-color: #002776;
+}
+
+.tekstas {
+margin-top:40%;
+text-align:center;
+color:white;
+}
+
+
+.forma2{
+  margin:60px;
+  display: inline-block;
+  width: 80% !important;
+  height: 400px;
+  border: 1px solid #002776;
+  border-radius:20px;
+  text-align:center;
+  background-color:#002776;
+}
+
+.nuotrauka {
+  width: 100px;
+  height:100px;
+  border: 1px solid white;
+  background-color:white;
+  margin: 10px auto;
+  background-image: url(menas/manager.png);
+  background-size: 99px 99px;
+  background-repeat: no-repeat;
+  border-radius:50%;
+}
+
+.tekstas2 {
+  width:80%;
+  margin: 10px auto;
+  color:white;
+  height: 210px;
+  margin-bottom:10px;
+  border: 1px solid white;
+  text-align:center;
+  font-size: 17px;
+}
+
+.mygtukas {
+  width: 80%;
+  text-align: center;
+  height:40px;
+  border: 1px solid #002776;
+  border-radius:5%;
+  background-color:white;
+  color: #002776;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.uzejimas2{
+margin-top: -103.25%;
+  position: absolute;
+  height: 100%;
+  width: 100%;                              
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #002776;
+  border-radius:50%;
+}
+
+
+
+.forma2:hover .nuotrauka{
+
+  background-color: #f76c6c;
+}
+
+.forma2:hover .mygtukas{
+
+  background-color: #f76c6c;
+  color:white !important;
+}
+
+.forma2:hover b{
+  color:white !important;
+}
+
+.forma2:hover span {
+  color: #fff !important
+}
+
+.mygtukas span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mygtukas span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mygtukas:hover span {
+  padding-right: 25px;
+}
+
+.mygtukas:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+}
+
+
+@media screen and (max-width: 1199px) {
+
+
+.juosta {
+  background: #009fda;
+  width:80%;
+  height:auto;
+  margin-left:10%;
+  color: #009fda;
+  margin: 1em auto;
+  height: 10px;
+}
+
+.copyright {
+  background: #002776;
+width:100%;
+height:auto;
+text-align:center;
+color:white;
+margin-left:0%;
+padding: 0.25em 0em;
+border-radius: 25px;
+}
+
+#virsus {
+width:100%; 
+margin-left:0%; 
+margin-top:0%;
+margin-bottom:20px;
+}
+
+.forma{
+  margin-top:20px;
+  display: none;
+  z-index: 0;
+  width: 200px;
+  border-radius:50%;
+  border-style: dotted;
+}
+
+
+.uzejimas{
+margin-top: -103.25%;
+  position: absolute;
+  height: 100%;
+  width: 100%;                              
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius:50%;
+}
+
+
+
+
+.forma:hover .uzejimas{
+  opacity: 1;           
+  background-color: #002776;
+}
+
+.tekstas {
+margin-top:45%;
+text-align:center;
+color:white;
+}
+
+#submit {
+    background-color: #002776;
+    border-radius:3px;
+    border-color: black;
+    border:1px;
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    position:left;
+}
+
+#submit:hover {
+    border: none;
+    background-color:#009fda;
+    color:white;
+    box-shadow: 0px 0px 1px #777;
+}
+
+
+
+
+.forma2{
+  margin:30%;
+  display: inline-block;
+  width: 200px;
+  height: 400px;
+  border: 1px solid #002776;
+  border-radius:20px;
+  text-align:center;
+  background-color:#002776;
+}
+
+.nuotrauka {
+  width: 100px;
+  height:100px;
+  border: 1px solid white;
+  background-color:white;
+  margin-left:50px;
+  margin-top:10px;
+  margin-bottom:10px;
+  background-image: url(menas/manager.png);
+  background-size: 99px 99px;
+  background-repeat: no-repeat;
+  border-radius:50%;
+}
+
+.tekstas2 {
+  margin-top:10px;
+  width:180px;
+  margin-left:10px;
+  color:white;
+  height: 210px;
+  margin-bottom:10px;
+  border: 1px solid white;
+  text-align:center;
+  font-size: 17px;
+}
+
+.mygtukas {
+  width: 80%;
+  text-align: center;
+  height:40px;
+  border: 1px solid black;
+  border-radius:5%;
+  background-color:white;
+  color: black;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.uzejimas2{
+margin-top: -103.25%;
+  position: absolute;
+  height: 100%;
+  width: 100%;                              
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius:50%;
+}
+
+
+
+.forma2:hover .nuotrauka{
+
+  background-color: #f76c6c;
+}
+
+.forma2:hover .mygtukas{
+
+  background-color: #f76c6c;
+  color:white;
+}
+
+.mygtukas span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mygtukas span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mygtukas:hover span {
+  padding-right: 25px;
+}
+
+.mygtukas:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+}

@@ -1,0 +1,563 @@
+.container {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+  }
+   
+body {
+    overflow-x: hidden;
+    overflow-y: unset;
+}
+  .navbar-nav { 
+    display: flex;
+    text-decoration: none; 
+    list-style-type: none;
+  } 
+
+  .navbar-nav li {
+      margin: 0.25em 1em;
+  }
+
+  .navbar-nav li a {
+      color: #fff;
+      text-decoration: none;
+  }
+
+  .navbar-header button {
+      display: none;
+  }
+
+  .navbar-header {
+      height: fit-content;
+      margin-top: 1em;
+      padding-bottom: 0.5em;
+  }
+
+  .hamburger{
+      display: none;
+  }
+  
+  .navbar-inverse.navbar-top {
+    background: #002776;
+    position: fixed;
+    top:0;
+    z-index: 99;
+    border-bottom: 3px solid #009fda;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+
+
+  #overlay {
+    display: none;
+    opacity: 0;
+    transition: 0.6s;
+    }  
+
+
+@media screen and (max-width: 1220px) {
+    .hamburger{
+        display: flex;
+        margin-left: 1em; 
+        cursor: pointer;
+        position:fixed;
+        margin-top: -1em;
+    }
+
+    .navbar-brand {
+        margin-right: 1em;
+    }
+
+    #overlay {
+        display: block;
+        position:fixed;
+        z-index: -1;
+        opacity: 0;
+        transition: 0.6s;
+        left:0;
+        top:41px;
+        width:100%;
+        height:100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }  
+
+
+    #overlay.active {
+        background: rgba(0,159,218,0.9);
+        z-index: 999;
+        opacity: 1;
+        transition:0.6s;
+        
+    }
+  
+    #overlay li a{
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size:1.6em;
+    }
+  
+    #overlay li {
+      list-style-type: none;
+      margin: 1em;
+    }
+
+
+    .hamburger div {
+        height: 30px;
+        width: 3px;
+        background: #009fda;
+        margin-left: 7px;
+        transition:0.6s;
+        opacity:1;
+    }
+
+    .hamburger.active div:nth-child(2){
+        margin-top:-50px;
+        opacity:0;
+    }
+
+    .hamburger.active div:nth-child(1){
+        transform: translateX(10px) rotate(45deg);
+    }
+
+    .hamburger.active div:nth-child(3){
+        transform: translateX(-10px) rotate(-45deg);
+    }
+
+    .hamburger.active div {
+        background: #fff;
+    }
+
+    .navbar-inverse.navbar-top {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+}
+
+body {
+    letter-spacing: 2px !important;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2{
+    font-size: 1.4em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+.naujienos {
+    font-size: 0.8em;
+}
+
+.info { 
+    padding: 1em 0em;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    text-align: center;
+}
+
+input[type=submit]{
+    background-color: #002776 !important;
+    border-radius:3px;
+    border-color: #009fda;
+    border:1px;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    position:left;
+    transition: 0.6s;
+}
+
+.uzduotys input {
+    width: 50%;
+}
+
+h1, h2 {
+    color: #009fda !important;
+}
+input[type=text], input[type=number], textarea, .darbuotojusarasas, select {
+    background-color:#009fda !important;
+    border: 2px solid #002776 !important;
+    border-radius: 5px !important;
+}
+
+.desinys {
+    background: unset !important;
+}
+
+
+
+.eilute b {
+    color: #002776 !important;
+}
+
+input[type=submit]:hover  {
+    border: none !important;
+    background-color:#009fda !important;
+    color:white !important;
+    box-shadow: 0px 0px 1px #777;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+.container {
+width:auto;
+}
+.info {
+    padding-bottom: 3em;
+  }
+
+.body {
+    background-image: url(../vaizdai/IMG_5112.jpg);
+    color: #002776;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+
+
+
+hr {
+border-top:2px solid #586062;
+}
+.darbo {
+    margin:5%; 
+    width:50%;
+    position:center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #538f5d;
+}
+
+.darbo:hover {
+    background-color: #53b55d;
+}
+
+
+.redaguoja {
+    margin-left:2px;
+    width:50%;
+    position:center;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.juosta {
+    background: #009fda;
+    width:80%;
+    height:auto;
+    position:relative;
+    margin-left:10%;
+    color: #009fda;
+    margin: 1em auto;
+    height: 10px;
+}
+
+.copyright {
+    background: #002776;
+    width:80%;
+    height:auto;
+    text-align:center;
+    color:white;
+    margin-left:10%;
+    padding: 0.25em 0em;
+    border-radius: 25px;
+    margin-top: 3em;
+    font-size: 0.8em;
+}
+
+.info {
+    height:auto;
+    width:80%;
+    color:black;
+    text-align: center;
+    opacity:1;
+    background-color: rgba(255,255,255,0.9);
+    margin: auto;
+}
+
+
+
+#submit {
+    background-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    border-color: black;
+    border:1%;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    position:left;
+}
+
+#virsus {
+width:80%; 
+margin-left:10%; 
+margin-top:0%;
+margin-bottom:20px;
+}
+
+#submit:hover {
+    border: none;
+    background-color:green;
+
+    box-shadow: 0px 0px 1px #777;
+}
+
+uzduotis {
+margin-top:1%;
+width:100%;
+height:10%;
+color:white;
+text-align:center;
+overflow:hidden;
+border: 1px solid black;
+}
+
+
+.kairys {
+ width: 12%;
+ background-color:#000000;
+ text-align:center;
+ opacity:1;
+ color:white;
+
+ float:right;
+}
+
+.desinys {
+float:left;
+position:relative;
+text-align:center;
+width:83%;
+height:auto;
+background-color: white;
+margin-left:0;
+}
+
+#par {
+  font-family:sans-serif;
+  color:white;
+  position: relative;
+  
+}
+              
+
+.lentele {
+    width:20%;
+    margin-left:5%;
+    margin-top:2%;
+    text-align:center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+.failass {
+    width: 12%;
+    margin-left:3%;
+    margin-top:3%;
+    text-align:center;
+    display: inline-block;
+
+
+}
+
+.zinute {
+    width: 30%;
+    margin-left:3%;
+    margin-top:3%;
+    text-align:center;
+    display: inline-block;
+
+
+}
+
+.input[text] {
+width:10%;
+}
+
+.failas-2 {
+    width: 3%;
+    margin-left:5%;
+    margin-top:2.75%;
+    text-align:center;
+    display: inline-block;
+}
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+
+
+.failas-2 {
+    width:40%;
+    max-width: 3em !important;
+    margin-left:3%;
+    display:inline-block;
+}
+
+.failass {
+    width: 80%;
+    vertical-align: middle;
+    margin-left:3.7%;
+    margin-top:3%;
+    text-align:center;
+    display: inline-block;
+}
+
+.lentele {
+    width:80%;
+    vertical-align: middle;
+    margin-top:10%;
+    margin-left:10%;
+    text-align:center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.desinys {
+position:relative;
+text-align:center;
+font-size: 0.8em;
+width:100%;
+height:auto;
+background-color: white;
+margin-left:0;
+margin-top:0;
+display:flex;
+justify-content: space-between;
+}
+
+.kairesbarai {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px !important;
+}
+
+.darbuotojusarasas {
+    width: 80% !important;
+}
+
+
+.juosta {
+    background: #009fda;
+    width:80%;
+    height:auto;
+    position:relative;
+    margin-left:10%;
+    color: #009fda;
+    margin: 1em auto;
+    height: 10px;
+}
+
+.copyright {
+    background: #002776;
+    width:100%;
+    height:auto;
+    text-align:center;
+    color:white;
+    margin-left:0%;
+    padding: 0.25em 0em;
+    font-size: 0.8em;
+}
+
+.info {
+    height:auto;
+    width:100%;
+    color:black;
+    text-align: center;
+    opacity:1;
+    background-color: rgba(255,255,255,0.9);
+}
+
+
+.navbar-inverse {
+width:100%;
+margin-left:0%;
+
+}
+
+.container {
+width:auto;
+}
+
+
+.body {
+    background-image: url(../vaizdai/IMG_5112.jpg);
+    color: #002776;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+#virsus {
+width:100%; 
+margin-left:0%; 
+margin-top:0%;
+margin-bottom:20px;
+}
+
+
+
+
+}
