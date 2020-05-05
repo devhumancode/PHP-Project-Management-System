@@ -12,10 +12,6 @@ session_start ();
  
  
 include("duom.php");
-$connection = mysqli_connect($host,$user,$password)
-or die ("Negalima prisijungti prie serverio");
-$db = mysqli_select_db($database,$connection)
-or die ("Nera duomenu bazes");
 $query = "SELECT * FROM  Prisijungimas WHERE id=\"$Id\""; 
 $result = mysqli_query($connection,$query)
 or die ("Negalima ivykdyti u˛klausos");

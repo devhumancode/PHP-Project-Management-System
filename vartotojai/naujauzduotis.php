@@ -1,7 +1,5 @@
-<?php
-include ('adminapsauga.php');      
+<?php 
 session_start ();
-include ('adizainas.php');
 
   
 ?>
@@ -9,10 +7,6 @@ include ('adizainas.php');
 
 <body class="body">
 
-  
-<?php 
- include ('skirtukas.php');
-?>
         <div class='info' style='overflow-x:scroll; text-align:center;'>         
 
               

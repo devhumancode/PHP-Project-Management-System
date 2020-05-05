@@ -25,6 +25,7 @@ include ('userdizainas.php');
 .virsus {
   margin-top:20px;
   height:80px;
+  color: #002776;
 }
 
 .ainfo {
@@ -51,11 +52,15 @@ height:100px;
         $_SESSION['projektas']=0;
         $id = $_SESSION['id'];   
         include("duom.php");
+
+
         $sql=mysqli_query($connection,"SELECT * FROM  ProjektuPrivilegijos WHERE VartotojoID='$id'");
 
         if($row=mysqli_fetch_array($sql)== false){
           echo "Currently you do not participate in any projects!";
          }
+
+         $sql=mysqli_query($connection,"SELECT * FROM  ProjektuPrivilegijos WHERE VartotojoID='$id'");
 
         while($row=mysqli_fetch_array($sql))
         {
@@ -99,10 +104,10 @@ height:100px;
         }
          ?>
          
-           <div class='projektas'>
+         <div class='projektas' >
                 <div class='virsus'>
-                  <b> <div class='tekstinedalis' style='width:200px; float:left;'><?php 
-                   echo "<h4>$pavadinimas</h4>";
+                  <b> <div class='tekstinedalis' style='float:left;'><?php 
+                   echo $pavadinimas; ?><br/><?php
                    echo $aprasymas;
                    ?> </div>
                    <?php
@@ -112,7 +117,7 @@ height:100px;
                    }
                    else
                    {
-                   ?><img src="../vaizdai/worker.png" alt="grįžti" style="width:40px;height:40px; margin-right:10px; float:right; margin-top:30px;">  <?php
+                   ?><?php
                    }
                    ?>
                   
@@ -120,7 +125,7 @@ height:100px;
                    <hr style="border-top: 2px solid black;">
                 <div class='ainfo'>
                   <div class='zmoniu'>
-                      <?php echo "Projekte dalyvauja $zmoniu žmonės <br/>";
+                      <?php echo "$zmoniu staff participating <br/><br/>";
                       if($teises==1)
                       {
                       ?>
@@ -168,30 +173,30 @@ height:100px;
                     
                   </div>
                   
-                  <div class='uzduotys' style='color:green;'>
+                  <div class='uzduotys' style=''>
                       <form method=POST action='rodouzduotis.php'>                   
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='1' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo $uzduociu;?>' style='background-color:white; border:none;'> 
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo $uzduociu;?>' style='background-color:white !important; border:none; color:green !important;'> 
                       </form>
                   </div>
                   
-                  <div class='uzduotys' style='color:orange;'>
+                  <div class='uzduotys' style=''>
                       <form method=POST action='rodouzduotis.php'>
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='2' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo $laukia;?>' style='background-color:white; border:none;'> 
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo $laukia;?>' style='background-color:white !important; border:none;color:orange !important;'> 
                       </form>
                   </div>
                   
-                  <div class='uzduotys' style='color:red;'>       
+                  <div class='uzduotys' style=''>       
                       <form method=POST action='rodouzduotis.php'>
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='3' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo $baigiasi;?>' style='background-color:white; border:none;'>   
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo $baigiasi;?>' style='background-color:white !important; border:none;color:red !important;'>   
                       </form>
                       
                   </div>

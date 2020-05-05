@@ -20,7 +20,7 @@ $pabaige = mysqli_num_rows($sql10);
 $sql=mysqli_query($connection,"select * from Prisijungimas WHERE id=$ziurimoid");
 while($row=mysqli_fetch_array($sql))
 {
-$vardas=$row['vardas'];
+$vardas=$row['vardas']; 
 $pavarde=$row['pavarde'];
 $numeris=$row['tel_nr'];
 $prisijungimas=$row['prisijungimu'];
@@ -46,6 +46,10 @@ while($row20=mysqli_fetch_array($sql20))
 ?>
 <html>
 <style>
+b {
+    color: #002776;
+}
+
 .table {
 min-width:321px;
 width:30%;
@@ -53,6 +57,10 @@ margin-left:20px;
 text-align:center; 
 float:left;
 margin-top:20px;
+}
+
+.statistika {
+    font-size: 0.8em !important;
 }
 
 table, th, td {
@@ -78,18 +86,50 @@ float:left;
 text-align:center;
 font-weight: bold;
 }
+.visas {
+            padding-top: 2em;
+      }
+
+@media screen and (max-width: 1199px) {
+      .desinys {
+            display: block !important;
+      }
+      table {
+            width: 100% !important;
+            border-bottom: 1px solid #002776;
+            margin-left: 0px !important;
+      }
+
+      .paveiksliukas {
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+            
+      }
+
+      .paveiksliukas img {
+          width: 30% !important;
+          height: unset !important;
+          margin: auto !important;
+          max-width: 100px !important;
+      }
+
+      table, td {
+            background-color: unset !important;
+      }
+
+      .visas {
+            padding-top: 4em;
+      }
+}
 </style>
 <body class="body">
 
-  
-<?php 
- include ('skirtukas.php');
-?>
         <div class='info' style='text-align:center; min-height:400px;'>         
 
               
               <div class='desinys' style='text-align:center; width:100%;'> 
-<div class='paveiksliukas' style='width:30%; height:300px; margin-top:20px; margin-left:20px; background-color:white; float:left; text-align:center;'>
+<div class='paveiksliukas' style='width:30%; float:left; text-align:center;'>
      <img src='../profiliofoto/<?php echo $foto ; ?>' style='width:200px; height:200px;'> 
 </div>                                                                        
 
@@ -100,7 +140,7 @@ font-weight: bold;
 <tr id="<?php echo $id; ?>" class="darbuotojas">
 
 <td>
-   <b>Vardas</b>
+   <b>Name</b>
 </td>
 
 <td class="darbuotojas_td">
@@ -116,7 +156,7 @@ font-weight: bold;
 <tr id="<?php echo $id; ?>" class="darbuotojas">
 
 <td>
-   <b>Pavardė</b>
+   <b>Surname</b>
 </td>
 
 <td class="darbuotojas_td">
@@ -130,7 +170,7 @@ font-weight: bold;
 <tr id="<?php echo $id; ?>" class="darbuotojas">
 
 <td>
-   <b>Numeris</b>
+   <b>Phone no.</b>
 </td>
 
 
@@ -144,7 +184,7 @@ font-weight: bold;
 
 <table width='50%' class='table' style=''>
 <tr id="<?php echo $id; ?>" class="darbuotojas">
-<td><b>Paštas</b></td>
+<td><b>Email</b></td>
 <td class="darbuotojas_td">
 <div id="pastas_<?php echo $id; ?>" class="text"><?php echo $pastas; ?></div> 
 </td>
@@ -153,7 +193,7 @@ font-weight: bold;
 
 <table width='50%' class='table' style=''>
 <tr id="<?php echo $id; ?>" class="darbuotojas">
-<td><b>Pareigos</b></td>
+<td><b>Job title</b></td>
 <td class="darbuotojas_td">
 <div id="pastas_<?php echo $id; ?>" class="text"><?php echo $pareigos; ?></div> 
 </td>
@@ -162,7 +202,7 @@ font-weight: bold;
 
 <table width='50%' class='table' style=''>
 <tr id="<?php echo $id; ?>" class="darbuotojas">
-<td><b>Prisijungta</b></td>
+<td><b>Last online</b></td>
 <td class="darbuotojas_td">
 <div id="pastas_<?php echo $id; ?>" class="text"><?php echo $prisijunge; ?></div> 
 </td>
@@ -174,19 +214,19 @@ font-weight: bold;
    </div>
 
   <div class='visas' style='text-align:center width:100%;'>
-    <h3><b> Šio darbuotojo statistika   </b> </h3>
+    <h3><b> Statistics of the employee   </b> </h3>
   </div>
    <hr style='border:2px solid black ;width:85%;'>
 <div class='statistika'>
-    Atliktos užduotys :  <Br>
+Number of tasks completed: <Br>
 </div>
 
 <div class='statistika'>
-    Projektai, kuriuose yra admin :  <br>
+Number of projects with admin rights:  <br>
 </div>
 
 <div class='statistika'>
-    Projektai, kuriuose dalyvauja : <br>
+Number of projects participating in: <br>
 </div>
 
 <div class='statistika' style='color:#0B610B;'>

@@ -13,14 +13,23 @@ include ('userdizainas.php');
 
 
 <body class="body">
+<style>
+ form {
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+ }
 
+ .desinys {
+   width: 100% !important;
+ }
+</style>
 
   
 <?php      
  include("duom.php"); 
  $projektoid=$_POST['projektoid'];
  
- include ('skirtukas.php');
 ?>
 
   <div class='info' style='height:600px;'>
@@ -28,8 +37,8 @@ include ('userdizainas.php');
       
         <div class='informacija' style='margin-left:5%; margin-top:2%;'>
           <form method=POST action='naujauzduotisp.php' style='float:left;'>
-          <b>Pasirinkite užduoties gavėją </b> 
-          <select name='darbuotojoid' style='background-color:black; color:white; width:172px; height:24px; border:2px solid black; margin-left:10px;'>
+          <b>Task assigned to:</b> <br/>
+          <select name='darbuotojoid' style='background-color:black; color:white; width:172px; height:24px; border:2px solid black;'>
             <?php
               $mano=$_SESSIOM['id'];
               $sql=mysqli_query($connection,"SELECT * FROM  ProjektuPrivilegijos WHERE ProjektoID='$projektoid'");
@@ -50,10 +59,10 @@ include ('userdizainas.php');
               }  
               }         
             ?>       
-          </select> <br>
+          </select> <br><br/>
           
           
-          <b>Pasirinkite užduoties svarbą </b> <select name='svarba' style='background-color:black; color:white; width:172px; height:24px; border:2px solid black; margin-left:10px;' required>
+          <b>Choose priority:</b><br/> <select name='svarba' style='background-color:black; color:white; width:172px; height:24px; border:2px solid black;' required>
             <?php
                $sql3=mysqli_query($connection,"SELECT * FROM  Svarba");
                while($row3=mysqli_fetch_array($sql3)) 
@@ -66,14 +75,14 @@ include ('userdizainas.php');
               }  
                        
             ?>       
-          </select> 
+          </select> <br/>
           
          
-          <br><b>Įveskite užduoties kategoriją </b>  <input type='text' value='' name='kategorija' style='background-color:black; color:white; border:2px solid black; margin-left:7px;' required>
-          <br><b>Įveskite užduotį </b> <br> <textarea name='tekstas' rows='4' cols='40' style='background-color:black; color:white; border:2px solid black;' required></textarea>
-          <br><b>Įveskite vėliausią atlikimo datą </b>   <input type='date' name='data' min='<?php echo date("Y-m-d");?>' max='2019-12-12' style='background-color:black; color:white' required>
+          <br><b>Category</b><br/> <input type='text' value='' name='kategorija'  style='background-color:black; color:white; width:172px; height:20px; border:2px solid black;' required><br>
+          <br><b>Describe the task</b><br/> <textarea name='tekstas' rows='4' cols='40' style='background-color:black; color:white; width: 50%; border:2px solid black;' required></textarea><br>
+          <br><b>Enter deadline </b>  <br/> <input type='date' name='data' min='<?php echo date("Y-m-d");?>' style='background-color:#009fda; border: 2px solid #002776; width:150px; color:white' required><br>
           <br>
-          <input type='submit' id='trinti' value='Sukurti užduotį' style='border:2px solid black; border-radius:5px; color:white; background-color:black;' >
+          <input type='submit' id='trinti' value='SUBMIT NEW TASK' style='border:2px solid black; border-radius:5px; color:white; background-color:black;' >
           <input type='hidden' name='projektas' value='<?php echo $projektoid;?>'>
           
           </form>

@@ -25,26 +25,27 @@
             
 <body class='body'>
 <ul id="overlay" style="font-size: 0.8em !important;">
+
 <li>
-                      <a href="projektai.php">Projektai</a>
+                      <a href="projektai.php">Projects</a>
                     </li> 
                       
                     <li>
-                        <a href="darbogrupes.php">Darbo grupės</a>
+                        <a href="darbogrupes.php">Work Groups</a>
                     </li>
                     <li>
-                        <a href="uzduotys.php">Užduotys</a>
+                        <a href="uzduotys.php">Tasks</a>
                     </li>
                     <li>
-                        <a href="showfile.php">Failai</a>
+                        <a href="showfile.php">Files</a>
                     </li>
 
                      <li>
-                      <a href="profilis.php">Profilis</a>
+                      <a href="profilis.php">Profile</a>
                     </li> 
                     
                      <li>
-                      <a href="zinutes.php">Žinutės</a>
+                      <a href="zinutes.php">Messages</a>
                     </li>
 
                     <li>

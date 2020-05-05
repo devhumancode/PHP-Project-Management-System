@@ -60,6 +60,7 @@ $siuntejoid=$row2['id'] ;
                       
                          <form action = "atsakozinute.php" method = "POST">
                          <input type='image' src='../vaizdai/reply.png' value='<?php echo $siuntejoid; ?>' name='siuntejas' style="width:20px; height:20px;">
+                         <input type="hidden" value='<?php echo $siuntejoid; ?>' name='siuntejas' >
                          <input type='submit' id='trinti' value='' hidden>
                          </form> 
                          
@@ -69,6 +70,7 @@ $siuntejoid=$row2['id'] ;
                       
                          <form action = "trinazinute.php" method = "POST">
                          <input type='image' src='../vaizdai/trina.png' value='<?php echo $id; ?>' name='id' style="width:20px; height:20px;">
+                         <input type="hidden" value='<?php echo $id; ?>' name='id'>
                          <input type='submit' id='trinti' value='' hidden>
                          </form> 
                     </div>

@@ -8,6 +8,9 @@ include ('userdizainas.php');
 <body class="body">
 
 <style>
+b {
+    color: #002776;
+}
 @media screen and (max-width: 1199px) {
       .desinys {
             display: block !important;

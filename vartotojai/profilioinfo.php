@@ -39,7 +39,7 @@ $.ajax({
 type: "POST",
 url: "pakeicia1.php",
 data: dataString,
-cache: false,
+cache: false, 
 success: function(html)
 {
 $("#vardas_"+ID).html(vardas);

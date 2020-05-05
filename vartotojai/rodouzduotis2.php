@@ -17,32 +17,32 @@ include ('userdizainas.php');
   height:auto;
   text-align:center;
   margin:2.5%;
-  background-color:black;
-  float:left;
-  border-radius:50px;
-  border:2px solid black;
+  background-color: #002776;
+    float: left;
+    border-radius: 50px;
+    border: 2px solid #009fda;
   color:#E6E6E6;
   font-size:16.5px;
 }
 
 .kaire{
-width:49%;
-float:left;
+width:48%;
 text-align:right;
 }
 
 .desine{
 height:23px;
 text-align:left;
-width:49%;
-float:right;
+width:48%;
 overflow-x: hidden;
 overflow-y: hidden;
 }
 
 .virsus {
   margin-top:20px;
-  height:100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .ainfo {
@@ -64,6 +64,10 @@ background-color:#E6E6E6;
 border-bottom-left-radius:0;
 border-bottom-right-radius:0;
 }
+
+@media screen and (max-width: 1199px) {
+
+}
 </style>
 
 
@@ -72,8 +76,6 @@ border-bottom-right-radius:0;
 
   
 <?php      
-  session_start();
- include ('skirtukas.php');
 ?>
 
   <div class='info' style='height:auto;'>
@@ -146,49 +148,45 @@ border-bottom-right-radius:0;
          
            <div class='projektas'>
                 <div class='virsus'>
-             <div class='kaire'><b>  Sukūrė </b> </div><div class='desine'> <?php echo $siuntejas;?> </div>
+             <div class='kaire'><b>  Created by </b> </div><div class='desine'> <?php echo $siuntejas;?> </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
    
-             <div class='kaire'><b>  Kūrėjo pareigos </b> </div> <div class='desine'> <?php echo $rangas;?></div>  
+             <div class='kaire'><b>  Creator job title</b> </div> <div class='desine'> <?php echo $rangas;?></div>  
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
               
-             <div class='kaire'><b>  Užduotis </b> </div> <div class='desine'><?php echo $tekstas;?></div>
+             <div class='kaire'><b>  Task </b> </div> <div class='desine'><?php echo $tekstas;?></div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Svarbumas </b> </div> <div class='desine'><?php echo $svarbumas;?> </div> 
+             <div class='kaire'><b>  Priority </b> </div> <div class='desine'><?php echo $svarbumas;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
               
-             <div class='kaire'><b>  Kategorija </b> </div> <div class='desine'><?php echo $kategorija;?> </div> 
+             <div class='kaire'><b>  Category </b> </div> <div class='desine'><?php echo $kategorija;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Būsena </b> </div> <div class='desine'> <?php echo $ebusena;?> </div>  
+             <div class='kaire'><b>  Status </b> </div> <div class='desine'> <?php echo $ebusena;?> </div>  
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
              
              
              
-             <div class='kaire'><b>  Siuntėjo komentaras </b> </div><div class='desine'><?php echo "$skomentaras <br> "; }?>   </div>
+             <div class='kaire'><b>  Message </b> </div><div class='desine'><?php echo "$skomentaras <br> "; }?>   </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Prisegtas failas   </b> </div><div class='desine' style='height:23px;'>
+             <div class='kaire'><b>  Attached files   </b> </div><div class='desine' style='height:23px;'>
              <form action = "uzduotiesfailai.php" method = "POST" style=' margin-left: -10px; margin-top: -7px; width:auto;};'>
              <input type='submit' src='../vaizdai/siuncia.png' name='failas' value='<?php echo $filename?>' style="border:none; background-color:black; color:white">
              </form>  <br>      </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
 
-             <div class='kaire'><b>  Sukūrta </b> </div> <div class='desine'> <?php echo $sdata;?> </div> 
+             <div class='kaire'><b>  Created </b> </div> <div class='desine'> <?php echo $sdata;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
                 
-             <div class='kaire'><b>  Atlikti iki </b> </div> <div class='desine'> <?php echo $bdata;?>  </div>
+             <div class='kaire'><b>  Complete by </b> </div> <div class='desine'> <?php echo $bdata;?>  </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div> 
                 
              </div>
-                 
-                <div class='ainfo'>
-                
-                </div>
-                 <hr style="border-top: 2px solid black;">
+                 <hr style="border-top: 2px solid #009fda;">
                 <div class='zmoniu'>
                 
                      <form method=POST action='reaguoti.php' style='float:left; width:49%; text-align:right;'>
@@ -296,41 +294,41 @@ border-bottom-right-radius:0;
          
           <div class='projektas'>
                 <div class='virsus'>
-             <div class='kaire'><b>  Sukūrė </b> </div><div class='desine'> <?php echo $siuntejas;?> </div>
+                <div class='kaire'><b>  Created by </b> </div><div class='desine'> <?php echo $siuntejas;?> </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
    
-             <div class='kaire'><b>  Kūrėjo pareigos </b> </div> <div class='desine'> <?php echo $rangas;?></div>  
+             <div class='kaire'><b>  Creator job title</b> </div> <div class='desine'> <?php echo $rangas;?></div>  
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
               
-             <div class='kaire'><b>  Užduotis </b> </div> <div class='desine'><?php echo $tekstas;?></div>
+             <div class='kaire'><b>  Task </b> </div> <div class='desine'><?php echo $tekstas;?></div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Svarbumas </b> </div> <div class='desine'><?php echo $svarbumas;?> </div> 
+             <div class='kaire'><b>  Priority </b> </div> <div class='desine'><?php echo $svarbumas;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
               
-             <div class='kaire'><b>  Kategorija </b> </div> <div class='desine'><?php echo $kategorija;?> </div> 
+             <div class='kaire'><b>  Category </b> </div> <div class='desine'><?php echo $kategorija;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Būsena </b> </div> <div class='desine'> <?php echo $ebusena;?> </div>  
+             <div class='kaire'><b>  Status </b> </div> <div class='desine'> <?php echo $ebusena;?> </div>  
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
              
              
              
-             <div class='kaire'><b>  Siuntėjo komentaras </b> </div><div class='desine'><?php echo "$skomentaras <br> "; }?>   </div>
+             <div class='kaire'><b>  Message </b> </div><div class='desine'><?php echo "$skomentaras <br> "; }?>   </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Prisegtas failas   </b> </div><div class='desine' style='height:23px;'>
+             <div class='kaire'><b>  Attached files   </b> </div><div class='desine' style='height:23px;'>
              <form action = "uzduotiesfailai.php" method = "POST" style=' margin-left: -10px; margin-top: -7px; width:auto;};'>
              <input type='submit' src='../vaizdai/siuncia.png' name='failas' value='<?php echo $filename?>' style="border:none; background-color:black; color:white">
              </form>  <br>      </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
 
-             <div class='kaire'><b>  Sukūrta </b> </div> <div class='desine'> <?php echo $sdata;?> </div> 
+             <div class='kaire'><b>  Created </b> </div> <div class='desine'> <?php echo $sdata;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
                 
-             <div class='kaire'><b>  Atlikti iki </b> </div> <div class='desine'> <?php echo $bdata;?>  </div>
+             <div class='kaire'><b>  Complete by </b> </div> <div class='desine'> <?php echo $bdata;?>  </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div> 
                 
              </div>
@@ -439,43 +437,43 @@ border-bottom-right-radius:0;
                   
         ?>
          
-           <div class='projektas'>
-                <div class='virsus'>
-             <div class='kaire'><b>  Sukūrė </b> </div><div class='desine'> <?php echo $siuntejas;?> </div>
+           <div class='projektas' style="display:flex;">
+                <div class='virsus' style="display:flex;">
+                <div class='kaire'><b>  Created by </b> </div><div class='desine'> <?php echo $siuntejas;?> </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
    
-             <div class='kaire'><b>  Kūrėjo pareigos </b> </div> <div class='desine'> <?php echo $rangas;?></div>  
+             <div class='kaire'><b>  Creator job title</b> </div> <div class='desine'> <?php echo $rangas;?></div>  
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
               
-             <div class='kaire'><b>  Užduotis </b> </div> <div class='desine'><?php echo $tekstas;?></div>
+             <div class='kaire'><b>  Task </b> </div> <div class='desine'><?php echo $tekstas;?></div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Svarbumas </b> </div> <div class='desine'><?php echo $svarbumas;?> </div> 
+             <div class='kaire'><b>  Priority </b> </div> <div class='desine'><?php echo $svarbumas;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
               
-             <div class='kaire'><b>  Kategorija </b> </div> <div class='desine'><?php echo $kategorija;?> </div> 
+             <div class='kaire'><b>  Category </b> </div> <div class='desine'><?php echo $kategorija;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Būsena </b> </div> <div class='desine'> <?php echo $ebusena;?> </div>  
+             <div class='kaire'><b>  Status </b> </div> <div class='desine'> <?php echo $ebusena;?> </div>  
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
              
              
              
-             <div class='kaire'><b>  Siuntėjo komentaras </b> </div><div class='desine'><?php echo "$skomentaras <br> "; }?>   </div>
+             <div class='kaire'><b>  Message </b> </div><div class='desine'><?php echo "$skomentaras <br> "; }?>   </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
-             <div class='kaire'><b>  Prisegtas failas   </b> </div><div class='desine' style='height:23px;'>
+             <div class='kaire'><b>  Attached files   </b> </div><div class='desine' style='height:23px;'>
              <form action = "uzduotiesfailai.php" method = "POST" style=' margin-left: -10px; margin-top: -7px; width:auto;};'>
              <input type='submit' src='../vaizdai/siuncia.png' name='failas' value='<?php echo $filename?>' style="border:none; background-color:black; color:white">
              </form>  <br>      </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
              
 
-             <div class='kaire'><b>  Sukūrta </b> </div> <div class='desine'> <?php echo $sdata;?> </div> 
+             <div class='kaire'><b>  Created </b> </div> <div class='desine'> <?php echo $sdata;?> </div> 
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div>
                 
-             <div class='kaire'><b>  Atlikti iki </b> </div> <div class='desine'> <?php echo $bdata;?>  </div>
+             <div class='kaire'><b>  Complete by </b> </div> <div class='desine'> <?php echo $bdata;?>  </div>
              <div class='randomas' style='position:relative; clear: left; opacity:1; '> </div> 
                 
              </div>

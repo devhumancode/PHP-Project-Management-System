@@ -3,11 +3,11 @@ session_start ();
 include ('userdizainas.php');
 
  include('duom.php');
-$gavejo= $_POST[siuntejas];   
+$gavejo= $_POST['siuntejas'];   
 
 
 $sql2=mysqli_query($connection,"SELECT * FROM Prisijungimas WHERE id=$gavejo");
-while($row2=mysqli_fetch_array($connection,$sql2))
+while($row2=mysqli_fetch_array($sql2))
 {
 $vardas=$row2['vardas'];
 $pavarde=$row2['pavarde'] ;

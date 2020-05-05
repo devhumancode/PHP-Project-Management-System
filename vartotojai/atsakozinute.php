@@ -3,7 +3,7 @@ session_start ();
 include ('userdizainas.php');
 
  include('duom.php');
-$gavejo= $_POST[siuntejas];   
+$gavejo= $_POST['siuntejas'];   
 
 
 $sql2=mysqli_query($connection,"SELECT * FROM Prisijungimas WHERE id=$gavejo");
@@ -19,10 +19,6 @@ $id=$row2['id'];
 
 <body class="body">
 
-  
-<?php 
- include ('skirtukas.php');
-?>
         <div class='info' style='overflow-x:scroll; text-align:center;'>         
 
               
@@ -31,7 +27,7 @@ $id=$row2['id'];
                        
                        <textarea rows="4" cols="50"  name='tekstas' style='text-align:top; width:70%; height:200px; margin-top:20px; margin-left:20px; float:left;'></textarea>
                   
-                       <label style='text-align:center; width:200px; height:40px; margin-top:20px; margin-left:-10px;'> <?php echo $vardas; echo " $pavarde"; ?> </label>
+                       <label style='text-align:center; width:200px; height:40px; margin-top:20px; margin-left:-10px;'><p style="color:#002776; font-size: 1em;">Reply to:</p><br/><?php echo $vardas; echo " $pavarde"; ?> </label>
                        <input type='hidden' value='<?php echo $id;?>' name='adresatas'>
                         
                        <div class='randomas' style='position:relative; clear: left; opacity:1; margin-top:30px; '> 
@@ -46,7 +42,7 @@ $id=$row2['id'];
                   <input type='submit' id='trinti' value='' hidden>
               
                   <a href='zinutes.php'>
-                      <img src="../vaizdai/grizti.png" alt="grįžti" style="width:40px;height:40px; margin-top: -10px; margin-left:20px; margin-bottom:30px;">
+                      <img src="../vaizdai/grizti.png" alt="grįžti" style="width:40px;height:40px; margin-top: -10px; margin-left:20px;">
                   </a>   
               </div>
               </form>

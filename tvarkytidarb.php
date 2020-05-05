@@ -104,6 +104,7 @@ border-radius:20px;
                 <?php echo "<b>$grupe</b> $vardas $pavarde" ;?>
                      <form action = "ismetadarbuotoja.php" method = "POST" style='background-color:white; margin-top:-28px; height:40px; width:40px; margin-left:30px; border-radius:25px; text-align:center;'>
                          <input type='image' src='../vaizdai/kickout.png' value='<?php echo $darbuotojoid; ?>' name='darbuotojoid' style="width:30px; height:30px; margin-left:4px; margin-bottom:2px;">
+                         <input type='hidden' value='<?php echo $darbuotojoid; ?>' name='darbuotojoid'>
                          <input type='hidden' value='<?php echo $projektoid; ?>' name='projektoid'>
                          <input type='submit' id='trinti' value='' hidden>
                      </form> 
@@ -166,6 +167,7 @@ border-radius:20px;
                     <?php echo "<b>$grupe</b> $vardas $pavarde" ;?>
                    <form action = "pridedadarbuotoja.php" method = "POST" type="POST" style='background-color:white; margin-top:-28px; height:40px; width:40px; margin-left:30px; border-radius:25px; text-align:center;'>
                          <input type='image' src='../vaizdai/pridetworker.png' value='<?php echo $gerasid; ?>' name='darbuotojoid' style="width:30px; height:30px; margin-left:4px; margin-bottom:2px;">
+                         <input type='hidden' name='id' value='<?php echo $gerasid; ?>'>
                          <input type='hidden' name='projektoid' value='<?php echo $projektoid; ?>'>
                          <input type='submit' id='trinti' value='' hidden>
                   </form>   

@@ -26,6 +26,11 @@ include('duom.php');
 $mano=$_SESSION['id'];
 
 $sql=mysqli_query($connection,"select * from Zinutes WHERE Grupe=$mano");
+if($row=mysqli_fetch_array($sql) == false){
+  echo "</div><div style='clear:both; width: 100%;'><br/><br/><br/><br/><p>Currently you do not have any messages!</p><br/><br/><br/></div>";
+ }
+
+ $sql=mysqli_query($connection,"select * from Zinutes WHERE Grupe=$mano");
 while($row=mysqli_fetch_array($sql))
 {
 $id=$row['ID'];
@@ -63,6 +68,7 @@ $siuntejoid=$row2['id'] ;
                       
                          <form action = "atsakozinute.php" method = "POST">
                          <input type='image' src='../vaizdai/reply.png' value='<?php echo $siuntejoid; ?>' name='siuntejas' style="width:20px; height:20px;">
+                         <input type="hidden" value='<?php echo $siuntejoid; ?>' name='siuntejas'>
                          <input type='submit' id='trinti' value='' hidden>
                          </form> 
                          
@@ -72,6 +78,7 @@ $siuntejoid=$row2['id'] ;
                       
                          <form action = "trinazinute.php" method = "POST">
                          <input type='image' src='../vaizdai/trina.png' value='<?php echo $id; ?>' name='id' style="width:20px; height:20px;">
+                         <input type="hidden" value='<?php echo $id; ?>' name='id'>
                          <input type='submit' id='trinti' value='' hidden>
                          </form> 
                     </div>
@@ -81,8 +88,6 @@ $siuntejoid=$row2['id'] ;
 <?php 
 }
 
-if($row2=mysqli_fetch_array($sql) == false){
-  echo "</div><div style='clear:both; width: 100%;'><br/><br/><br/><br/><p>Currently you do not have any messages!</p><br/><br/><br/></div>";
- }
 
+echo "</div><div style='clear:both; width: 100%;'></div>";
 ?>

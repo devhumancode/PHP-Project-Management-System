@@ -63,12 +63,14 @@ height:100px;
         $id = $_SESSION['id'];   
         include("duom.php");
         $teises= 0;
+
         $sql=mysqli_query($connection,"SELECT * FROM  ProjektuPrivilegijos WHERE VartotojoID='$id'");
 
         if($row=mysqli_fetch_array($sql)== false){
           echo "Currently you do not have any tasks assigned to you!";
          }
-        
+
+         $sql=mysqli_query($connection,"SELECT * FROM  ProjektuPrivilegijos WHERE VartotojoID='$id'");
         while($row=mysqli_fetch_array($sql))
         {
         
@@ -114,7 +116,7 @@ height:100px;
          ?>
          
            <div class='projektas'>
-                <div class='virsus'>
+                <div class='virsus' style="background: #002776;">
                   <b> <div class='tekstinedalis' ><?php 
                    echo "<h4>$pavadinimas</h4>";
                    echo $aprasymas;
@@ -128,29 +130,29 @@ height:100px;
                        ?>
      
                   
-                 <div class='uzduotys' style='color:red;'>       
+                 <div class='uzduotys' style='color:red !important;'>       
                       <form method=POST action='rodouzduotis2.php'>
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='3' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$baigiasi task that has to be completed today!";?>' style='background-color:white; border:none;'>   
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$baigiasi task(s) that has to be completed today!";?>' style='background-color:white !important; color: red !important; border:none;'>   
                   </form> 
                   
-                  <div class='uzduotys' style='color:orange;'>
+                  <div class='uzduotys' style='color:orange !important;'>
                       <form method=POST action='rodouzduotis2.php'>
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='2' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$laukia tasks awaiting approval.";?>' style='background-color:white; border:none;'> 
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$laukia task(s) waiting for aproval.";?>' style='background-color:white !important; color: orange !important; border:none;'> 
                       </form>
                   </div>
                   
-                  <div class='uzduotys' style='color:green;'>
+                  <div class='uzduotys' style='color:green !important;'>
                       <form method=POST action='rodouzduotis2.php'>                   
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='1' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$uzduociu tasks awaiting results.";?>' style='background-color:white; border:none;'> 
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$uzduociu task(s) pending.";?>' style='background-color:white !important; color: green !important; border:none;'> 
                       </form>
                   </div>
                   

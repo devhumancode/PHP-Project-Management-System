@@ -71,7 +71,7 @@ include ('userdizainas.php');
          
           <br><b>Įveskite užduoties kategoriją </b>  <input type='text' value='' name='kategorija' style='background-color:black; color:white; border:2px solid black; margin-left:7px;' required>
           <br><b>Įveskite užduotį </b> <br> <textarea name='tekstas' rows='4' cols='40' style='background-color:black; color:white; border:2px solid black;' required></textarea>
-          <br><b>Įveskite vėliausią atlikimo datą </b>   <input type='date' name='data' min='<?php echo date("Y-m-d");?>' max='2019-12-12' style='background-color:black; color:white' required>
+          <br><b>Įveskite vėliausią atlikimo datą </b>   <input type='date' name='data' min='<?php echo date("Y-m-d");?>' style='background-color:black; color:white' required>
           <br>
           <input type='submit' id='trinti' value='Sukurti užduotį' style='border:2px solid black; border-radius:5px; color:white; background-color:black;' >
           <input type='hidden' name='projektas' value='<?php echo $projektoid;?>'>

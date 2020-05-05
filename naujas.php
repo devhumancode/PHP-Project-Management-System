@@ -58,7 +58,7 @@ include ('userdizainas.php');
                   <input type='submit' id='trinti' value='' hidden>
               
                   <a href='zinutes.php'>
-                      <img src="../vaizdai/grizti.png" alt="grįžti" style="width:40px;height:40px; margin-top: -10px; margin-left:20px; margin-bottom:30px;">
+                      <img src="../vaizdai/grizti.png" alt="grįžti" style="width:40px;height:40px; margin-top: -10px; margin-left:20px;">
                   </a>   
               </div>
               </form>
