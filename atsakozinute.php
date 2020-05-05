@@ -29,7 +29,7 @@ $id=$row2['id'];
               <div class='desinys' style='text-align:center; width:95%;'>    
                   <form action='issiunciazinute.php' method=POST>
                        
-                       <textarea rows="4" cols="50"  name='tekstas' style='text-align:top; width:70%; height:200px; margin-top:20px; margin-left:20px; float:left;'></textarea>
+                       <textarea rows="4" cols="50"  name='tekstas' style='text-align:top; width:70%; height:200px; margin-top:20px; margin-left:20px; float:left;' placeholder="enter your message here"></textarea>
                   
                        <label style='text-align:center; width:200px; height:40px; margin-top:20px; margin-left:-10px;'> <?php echo $vardas; echo " $pavarde"; ?> </label>
                        <input type='hidden' value='<?php echo $id;?>' name='adresatas'>
