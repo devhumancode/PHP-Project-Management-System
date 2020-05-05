@@ -82,7 +82,7 @@ $siuntejoid=$row2['id'] ;
 }
 
 if($row2=mysqli_fetch_array($sql) == false){
-  echo "<br/><br/><br/><br/>Currently you do not have any messages!<br/><br/><br/>";
+  echo "</div><div style='clear:both; width: 100%;'><br/><br/><br/><br/><p>Currently you do not have any messages!</p><br/><br/><br/></div>";
  }
 
 ?>

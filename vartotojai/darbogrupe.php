@@ -9,7 +9,11 @@
     text-align:center;
     display: inline-block;
 }
-
+@media screen and (max-width: 1199px) {
+    .desinys {
+      overflow-x: scroll;
+    }
+}   
 
 
 </style>
@@ -27,7 +31,7 @@ include ('duom.php');
 ?>
     <div class='info' style='overflow-x:scroll; text-align:center;'>   
     <br>
-    <h4>Pasirinkitę dominančią grupę :</h4>
+    <h4>Choose desired job title in the group:</h4>
     <form method=POST action='konkretidarbogrupe.php' style='margin-top:20px;'>
     <select name='reikiama' style='color:white; background-color:black; height:35px;'>
 
@@ -52,7 +56,7 @@ include ('duom.php');
 ?>
               
          </select>
-         <input type='submit' value='rasti' style='width:100px; height:35px; background-color:black; color:white;'>
+         <input type='submit' value='FIND' style='width:100px; height:35px; background-color:black; color:white;'>
          <input type='hidden' name='projektoid' value='<?php echo $projektoid ;?>'>
          </form>
         <div class='randomas' style='position:relative; clear: left; opacity:0; margin-top:30px; '> 
@@ -61,27 +65,27 @@ include ('duom.php');
                       <table class='table' style='width:98%; margin-left:2%; margin-top:2%; text-align:center;'>
                       <tr>
                      <td  style='font-weight: bold;' >
-                      Vardas
+                      Name
                     </td>
 
                      <td style='font-weight: bold;'>
-                      Pavardė
+                      Surname
                     </td>
                     
                     <td style='font-weight: bold;'>
-                      Pareigos
+                      Job Title
                     </td>
                     
                     <td style='font-weight: bold;'>
-                      Telefonas
+                      Mobile no.
                     </td>
 
                     <td style='font-weight: bold;'>
-                      Paštas
+                      Email
                     </td>
                     
                     <td style='font-weight: bold;'>
-                      Profilis
+                      See Profile
                     </td>
                     </tr>                       
                              

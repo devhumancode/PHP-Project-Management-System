@@ -19,15 +19,14 @@ input[type="file"] {
     color:white;
     background-color:black;
 }   
-
+@media screen and (max-width: 1199px) {
+    form {
+        width: 100% !important;
+    }
+}   
 </style>
 <body class="body">
-
-  
-<?php 
- include ('skirtukas.php');
-?>
-          
+     
         <div class='info' style='text-align:center;'>         
               
               
@@ -39,15 +38,15 @@ input[type="file"] {
               
                       <form action="upload.php" method="post" enctype="multipart/form-data">
               
-                       <b>Prisegamas tekstas</b><br>
-                       <textarea name='pavadinimas' rows='4' cols='40' style='background-color:black; color:white; border:2px solid black;' required>Užduoties tekstas</textarea>
+                       <b>Message</b><br>
+                       <textarea name='pavadinimas' rows='4' cols='40' style='background-color:black; color:white; border:2px solid black;' placeholder="write here" required></textarea>
                    
                       <div class='randomas' style='position:relative; clear: left; opacity:0; margin-top:30px;'>   
                       </div>
                    
-                       <b>Failas </b><br>
+                       <b>Attachment </b><br>
                         <label for="file-upload" class="custom-file-upload">
-                            <i class="fa fa-cloud-upload"></i> Pasirinkite failą
+                            <i class="fa fa-cloud-upload"></i> Choose file
                         </label>
                         <input id="file-upload" name="fileToUpload" type="file">
                             <div style='clear:left;'>
@@ -57,7 +56,7 @@ input[type="file"] {
                        <div class='randomas' style='position:relative; clear: left; opacity:0; margin-top:30px;'>   
                        </div>
                     
-                       <b>Gavėjas </b> <br>
+                       <b>Send to</b> <br>
                        <select name="gavejas" style='text-align:center; height:30px; margin-top:5px; background-color:black; color:white;'>
                        
                         <?php 
@@ -88,9 +87,8 @@ input[type="file"] {
                         ?>
                         </select>
                           <br><br>              
-                    
-                       <b>Patvirtinti</b> <br>
-                       <input type="submit" value="Įkelkite failą" name="submit" style='width: 200px; background-color:black; color:white; display:inline;'>
+                     <br>
+                       <input type="submit" value="SEND" name="submit" style='width: 200px; background-color:black; color:white; display:inline;'>
                     
                     </form>
                     

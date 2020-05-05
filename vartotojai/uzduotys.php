@@ -133,7 +133,7 @@ height:100px;
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='3' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$baigiasi užduočių, kurios turi būti atliktos šiandien!";?>' style='background-color:white; border:none;'>   
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$baigiasi task that has to be completed today!";?>' style='background-color:white; border:none;'>   
                   </form> 
                   
                   <div class='uzduotys' style='color:orange;'>
@@ -141,7 +141,7 @@ height:100px;
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='2' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$laukia užduočių, kurios laukia patvirtinimo.";?>' style='background-color:white; border:none;'> 
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$laukia tasks awaiting approval.";?>' style='background-color:white; border:none;'> 
                       </form>
                   </div>
                   
@@ -150,7 +150,7 @@ height:100px;
                       <input type='hidden' value='<?php echo $projektas; ?>' name='projektoid'>
                       <input type='hidden' value='1' name='veiksmas'>
                       <input type='hidden' value='<?php echo $teises; ?>' name='teises'>
-                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$uzduociu užduočių, kurios laukia darbo rezultatų.";?>' style='background-color:white; border:none;'> 
+                      <input type='submit' id='trinti' name='reikiamas' value='<?php echo "$uzduociu tasks awaiting results.";?>' style='background-color:white; border:none;'> 
                       </form>
                   </div>
                   

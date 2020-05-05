@@ -7,10 +7,32 @@ include ('userdizainas.php');
 
 <body class="body">
 
-  
-<?php 
- include ('skirtukas.php');
-?>
+<style>
+@media screen and (max-width: 1199px) {
+      .desinys {
+            display: block !important;
+      }
+      table {
+            width: 100% !important;
+            border-bottom: 1px solid #002776;
+            margin-left: 0px !important;
+      }
+
+      .paveiksliukas {
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+      }
+
+      table, td {
+            background-color: unset !important;
+      }
+
+      .visas {
+            padding-top: 4em;
+      }
+}
+</style>
         <div class='info' style='overflow-x:scroll; text-align:center;'>         
 
               

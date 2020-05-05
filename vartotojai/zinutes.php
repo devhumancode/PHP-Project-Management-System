@@ -12,7 +12,7 @@ include ('userdizainas.php');
               <div class='desinys' style='text-align:center; width:95%;'>    
 
                 <?php include ('gaunazinutes.php'); ?>
-              </div> 
+           
              
 
               <div class='randomas' style='position:relative; clear: left; opacity:1; margin-top:30px; '> 

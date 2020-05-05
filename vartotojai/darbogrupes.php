@@ -4,19 +4,22 @@ include ('userdizainas.php');
     
 ?>
 <html>
-
+<style>
+@media screen and (max-width: 1199px) {
+    .desinys {
+        width: 100% !important;
+        flex-direction: column;
+    }
+}   
+</style>
 <body class="body">
 
-  
-<?php 
- include ('skirtukas.php');
-?>
         <div class='info' style='overflow-x:scroll; text-align:center;'>         
 
               
               <div class='desinys' style='text-align:center; width:100%;'>    
                                                <br>
-<h2>Pasirinkite jus dominantį projektą : </h2>
+<h2>Choose project that interests you: </h2>
                         <form action='darbogrupe.php' method=POST style='text-align:center;'>
                         <select name="projektoid" style='text-align:center; height:40px; margin-top:20px; width:200px; background-color:black; color:white'>
                         <?php 

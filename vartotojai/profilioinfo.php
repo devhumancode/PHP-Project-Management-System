@@ -183,7 +183,7 @@ while($row20=mysqli_fetch_array($sql20))
                         
 ?>
 <div class='paveiksliukas' style='width:250px;;  min-height:400px;height:auto%; margin-top:20px; margin-left:20px; background-color:white; float:left; text-align:center;'>
-     <img src='../profiliofoto/<?php echo $foto ; ?>' style='width:200px; height:200px; border-radius:50%; border:4px solid grey;'> 
+     <img src='https://i.pinimg.com/originals/98/f7/61/98f761b180f2ddfbf668e3486dd2c838.png' style='width:200px; height:200px; border-radius:50%; border:4px solid grey;'> 
 </div>                                                                        
 
 
@@ -330,7 +330,7 @@ while($row20=mysqli_fetch_array($sql20))
    <br>
                                                       
               <div class='randomas' style='position:relative; clear: left; opacity:1; margin-top:150px; '> 
-                  <form action="keiciafoto.php" method="post" enctype="multipart/form-data">
+                  <form action="#" method="post" enctype="multipart/form-data">
                          <label for="file-upload" class="custom-file-upload">
                             <i class="fa fa-cloud-upload"></i>Choose profile picture
                         </label>
@@ -338,7 +338,7 @@ while($row20=mysqli_fetch_array($sql20))
                             <div style='clear:left;'>
                             </div>
                       <input type='hidden' name='fotoid' value='<?php echo $fotoid; ?>'>
-                      <input type="submit" value="UPLOAD" name="submit" style='width: 60%;  margin-top: 2em; height:30px;display:inline; color:white; background-color:black;'>
+                      <input type="submit" value="UPLOAD" name="submit" onclick="alert('this function is currently disabled')" style='width: 60%;  margin-top: 2em; height:30px;display:inline; color:white; background-color:black;'>
                   </form>
               </div>
 

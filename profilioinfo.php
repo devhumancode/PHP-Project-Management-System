@@ -122,6 +122,7 @@ font-weight: bold;
 
 <?php
 include('duom.php');
+session_start();
 $idy=$_SESSION['id'];
 
 if($_SESSION['blogasfailas'] !== null){

@@ -1,14 +1,24 @@
 <?php   
 session_start ();
+$_SESSION['blogasfailas'] = 0;
 include ('userdizainas.php');  
 ?>
 <html>
+<style>
+@media screen and (max-width: 1199px) {
+ font {
+     width: 100% !important;
+ }
+
+ .kairys {
+      width: 50% !important;
+      margin: auto;
+ }
+}
+</style>
+
 <body class="body">
 
-  
-<?php 
- include ('skirtukas.php');
-?>
         <div class='info' style='min-height:800px;'>         
               <div class='kairys'>
                   <?php include('clock.php'); ?>
@@ -70,23 +80,22 @@ include ('userdizainas.php');
                   
                   ?>
                   
-                  <h1> <b>Įmonės naujienos </b></h1>  <br>
+                  <h1> <b>Company latest news: </b></h1>  <br>
                   <hr style='border:2px solid black; width:80%;'>
                   <div class='naujienos' style='margin-left:10%; text-align:left;'>
-                       <b><h2>Naujausias įmonės darbuotojas : </h2></b><br>
+                       <b><h2>Fresher in company: </h2></b><br>
                        <?php echo "<b> $grupe </b> $vardas $pavarde";?>
                   </div>
                   <br>
                        <hr style='border:2px solid black; width:80%;'>
                   <div class='naujienos' style='margin-left:10%; text-align:left;'>    
-                       <b><h2>Paskutinė atlikta užduotis : </h2></b><br>
-                       <b>Projektas </b> <?php echo $pavadinimas;?> <br>
-                       <b>Sukurtas </b> <?php echo $sukurtas;?> <br>
-                       <b>Užduoties kategorija </b> <?php echo $kategorija;?> <br>
-                       <b>Užduotis </b> <?php echo $tekstas;?> <br>
-                       <b>Užduotis sukurta  </b> <?php echo $sukurimo;?> <br>
-                       <b>Užduotis pabaigta </b> <?php echo $baigimo;?> <br>
-                       <b>Atliko </b> <?php echo "$pvardas $ppavarde";?> <br> <br>   <Br>
+                       <b><h2>Last completed task: </h2></b><br>
+                       <b>Project </b> <?php echo $pavadinimas;?> <br>
+                       <b>Category </b> <?php echo $kategorija;?> <br>
+                       <b>Task </b> <?php echo $tekstas;?> <br>
+                       <b>Created  </b> <?php echo $sukurimo;?> <br>
+                       <b>Finished </b> <?php echo $baigimo;?> <br>
+                       <b>Completed by: </b> <?php echo "$pvardas $ppavarde";?> <br> <br>   <Br>
                     
                   </div>     
                   

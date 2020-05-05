@@ -11,7 +11,7 @@ include ('userdizainas.php');
         <div class='info' style='overflow-x:scroll; text-align:center;'>         
 
               
-              <div class='desinys' style='text-align:center; width:95%;'>    
+              <div class='desinys' style='text-align:center; width:95%; display: block !important;'>    
             <?php include('profilioinfo.php') ?>
                      
              </div> 

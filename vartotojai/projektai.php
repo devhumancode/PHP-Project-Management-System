@@ -46,19 +46,17 @@ height:100px;
 
 <body class="body">
 
-
-  
-<?php      
-  session_start();
- include ('skirtukas.php');
-?>
-
   <div class='info' style='min-height:600px; height:auto;'>
       <?php 
         $_SESSION['projektas']=0;
         $id = $_SESSION['id'];   
         include("duom.php");
         $sql=mysqli_query($connection,"SELECT * FROM  ProjektuPrivilegijos WHERE VartotojoID='$id'");
+
+        if($row=mysqli_fetch_array($sql)== false){
+          echo "Currently you do not participate in any projects!";
+         }
+
         while($row=mysqli_fetch_array($sql))
         {
          $zmoniu=0;

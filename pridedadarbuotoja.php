@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include('duom.php');
 
@@ -10,6 +9,6 @@ $sql=mysqli_query($connection,"INSERT INTO `webman_baig`.`ProjektuPrivilegijos` 
 
 $_SESSION['projektas']=$pid;
 
-header('location: tvarkytidarb.php')
+// header('location: tvarkytidarb.php')
 
 ?>

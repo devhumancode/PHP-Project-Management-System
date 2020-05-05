@@ -4,13 +4,6 @@ $_SESSION['bad']=0;
 include ('userdizainas.php');
     
 ?>
-
-
-
-  
-<?php 
- include ('skirtukas.php');
-?>
           
         <div class='info' style='height:auto; text-align:center;'>         
 
